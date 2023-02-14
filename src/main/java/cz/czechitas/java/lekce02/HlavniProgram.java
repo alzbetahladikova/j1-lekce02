@@ -9,8 +9,21 @@ public class HlavniProgram {
 
         //TODO tady bude kód
 
-        //vlastní cvičení
-        /* domel
+        /* čtverec
+        for (int i=0; i<4; i++) {
+            zofka.move(100);
+            zofka.turnLeft(90);
+        }
+        */
+        /* trojúhelník
+        for (int i=0; i<3; i++) {
+            zofka.move(100);
+            zofka.turnLeft(120);}
+
+         */
+
+
+        /* domek
         for (int i=0; i<4; i++) {
             zofka.move(100);
             zofka.turnLeft(90);
@@ -21,13 +34,22 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         zofka.move(70.7);
         zofka.turnLeft(45);
-*/
-        /* kruh
+        */
+
+        /*kolecko a zmena místa
+
+        for (int i=0; i<365; i++) {
+            zofka.move(1);
+            zofka.turnLeft(1);}
+
+        zofka.setLocation(200, 200);
         for (int i=0; i<365; i++) {
             zofka.move(1);
             zofka.turnLeft(1);}
 
          */
+
+
 
 
 

@@ -9,102 +9,37 @@ public class HlavniProgram {
 
         //TODO tady bude kód
 
-        /* čtverec
-        for (int i=0; i<4; i++) {
-            zofka.move(100);
-            zofka.turnLeft(90);
-        }
-        */
-        /* trojúhelník
-        for (int i=0; i<3; i++) {
-            zofka.move(100);
-            zofka.turnLeft(120);}
 
-         */
+        nakresliCtverec(100, 100);
+        nakresliCtverec(250, 100);
+        nakresliCtverec(400, 100);
+        nakresliCtverec(550, 100);
 
 
-        /* domek
-        for (int i=0; i<4; i++) {
-            zofka.move(100);
-            zofka.turnLeft(90);
-        }
-        zofka.move(100);
-        zofka.turnLeft(45);
-        zofka.move(70.7);
-        zofka.turnLeft(90);
-        zofka.move(70.7);
-        zofka.turnLeft(45);
-        */
-
-        /*kolecko a zmena místa
-
-        for (int i=0; i<365; i++) {
-            zofka.move(1);
-            zofka.turnLeft(1);}
-
-        zofka.setLocation(200, 200);
-        for (int i=0; i<365; i++) {
-            zofka.move(1);
-            zofka.turnLeft(1);}
-
-         */
-
-        // několik domků ručně
-        /*
-        zofka.setLocation(200, 200);
-
-        for (int i=0; i<4; i++) {
-            zofka.move(100);
-            zofka.turnLeft(90);
-        }
-        zofka.move(100);
-        zofka.turnLeft(45);
-        zofka.move(70.7);
-        zofka.turnLeft(90);
-        zofka.move(70.7);
-        zofka.turnLeft(225);
+        nakresliTrojuhelnik(100, 300);
+        nakresliTrojuhelnik(250, 300);
+        nakresliTrojuhelnik(400, 300);
+        nakresliTrojuhelnik(550, 300);
 
 
-        zofka.setLocation(400, 200);
+        nakresliDomek(100, 500);
+        nakresliDomek(250, 500);
+        nakresliDomek(400, 500);
+        nakresliDomek(550, 500);
 
-        for (int i=0; i<4; i++) {
-            zofka.move(100);
-            zofka.turnLeft(90);
-        }
-        zofka.move(100);
-        zofka.turnLeft(45);
-        zofka.move(70.7);
-        zofka.turnLeft(90);
-        zofka.move(70.7);
-        zofka.turnLeft(45);
 
-         */
+        nakreliKolecko(800,100);
+        nakreliKolecko(1000,100);
 
-        //několik domků automat
-double x=200;
-double y=200;
-        zofka.setLocation(x,y);
+        nakresliPrasatko(800, 300);
+        nakresliPrasatko(1000, 300);
 
-for (int a=0;a<5;a++) {
-    for (int i = 0; i < 4; i++) {
-        zofka.move(100);
-        zofka.turnLeft(90);
+
     }
-    zofka.move(100);
-    zofka.turnLeft(45);
-    zofka.move(70.7);
-    zofka.turnLeft(90);
-    zofka.move(70.7);
-    zofka.turnLeft(225);
 
-    zofka.setX(zofka.getX() + 250);
-    zofka.setY(zofka.getY() + 100);
-
-}
-
-// prasatko
-        zofka.setLocation(500, 500);
-zofka.turnLeft(90);
+    private void nakresliPrasatko(double x, double y) {
+        zofka.setLocation(x, y);
+        zofka.turnLeft(90);
 
         for (int i = 0; i < 4; i++) {
             zofka.move(100);
@@ -123,9 +58,9 @@ zofka.turnLeft(90);
         zofka.move(40);
         zofka.setLocation(predniNohyX,predniNohyY);
         zofka.turnLeft(60);
-       zofka.move(40);
-       zofka.setLocation(predniNohyX,predniNohyY);
-       zofka.turnLeft(60);
+        zofka.move(40);
+        zofka.setLocation(predniNohyX,predniNohyY);
+        zofka.turnLeft(60);
         zofka.move(70);
         double zadniNohyX =zofka.getX();
         double zadniNohyY= zofka.getY();
@@ -134,9 +69,44 @@ zofka.turnLeft(90);
         zofka.setLocation(zadniNohyX,zadniNohyY);
         zofka.turnLeft(60);
         zofka.move(40);
+        zofka.turnLeft(150);
+    }
 
+    private void nakreliKolecko(double x, double y) {
+        zofka.setLocation(x, y);
+        for (int i=0; i<360; i++) {
+            zofka.move(1);
+            zofka.turnLeft(1);}
 
+    }
 
+    private void nakresliDomek(double x, double y) {
+        zofka.setLocation(x, y);
+        for (int i=0; i<4; i++) {
+            zofka.move(100);
+            zofka.turnLeft(90);
+        }
+        zofka.move(100);
+        zofka.turnLeft(45);
+        zofka.move(70.7);
+        zofka.turnLeft(90);
+        zofka.move(70.7);
+        zofka.turnRight(135);
+    }
+
+    private void nakresliTrojuhelnik(double x, double y) {
+        zofka.setLocation(x, y);
+        for (int i=0; i<3; i++) {
+            zofka.move(100);
+            zofka.turnLeft(120);}
+    }
+
+    private void nakresliCtverec(double x, double y) {
+        zofka.setLocation(x, y);
+        for (int i=0; i<4; i++) {
+            zofka.move(100);
+            zofka.turnLeft(90);
+        }
     }
 
     public static void main(String[] args) {

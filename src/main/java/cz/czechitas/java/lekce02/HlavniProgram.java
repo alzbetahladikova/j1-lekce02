@@ -4,6 +4,7 @@ import cz.czechitas.java.lekce02.engine.Turtle;
 
 public class HlavniProgram {
     private Turtle zofka;
+
     public void start() {
         zofka = new Turtle();
 
@@ -28,8 +29,8 @@ public class HlavniProgram {
         nakresliDomek(550, 500);
 
 
-        nakresliKolecko(800,100);
-        nakresliKolecko(1000,100);
+        nakresliKolecko(800, 100);
+        nakresliKolecko(1000, 100);
 
         nakresliPrasatko(800, 300);
         nakresliPrasatko(1000, 300);
@@ -52,21 +53,21 @@ public class HlavniProgram {
         zofka.move(70.7);
         zofka.turnLeft(45);
         zofka.move(20);
-        double predniNohyX =zofka.getX();
-        double predniNohyY= zofka.getY();
+        double predniNohyX = zofka.getX();
+        double predniNohyY = zofka.getY();
         zofka.turnRight(120);
         zofka.move(40);
-        zofka.setLocation(predniNohyX,predniNohyY);
+        zofka.setLocation(predniNohyX, predniNohyY);
         zofka.turnLeft(60);
         zofka.move(40);
-        zofka.setLocation(predniNohyX,predniNohyY);
+        zofka.setLocation(predniNohyX, predniNohyY);
         zofka.turnLeft(60);
         zofka.move(70);
-        double zadniNohyX =zofka.getX();
-        double zadniNohyY= zofka.getY();
+        double zadniNohyX = zofka.getX();
+        double zadniNohyY = zofka.getY();
         zofka.turnRight(120);
         zofka.move(40);
-        zofka.setLocation(zadniNohyX,zadniNohyY);
+        zofka.setLocation(zadniNohyX, zadniNohyY);
         zofka.turnLeft(60);
         zofka.move(40);
         zofka.turnLeft(150);
@@ -74,15 +75,16 @@ public class HlavniProgram {
 
     private void nakresliKolecko(double x, double y) {
         zofka.setLocation(x, y);
-        for (int i=0; i<360; i++) {
+        for (int i = 0; i < 360; i++) {
             zofka.move(1);
-            zofka.turnLeft(1);}
+            zofka.turnLeft(1);
+        }
 
     }
 
     private void nakresliDomek(double x, double y) {
         zofka.setLocation(x, y);
-        for (int i=0; i<4; i++) {
+        for (int i = 0; i < 4; i++) {
             zofka.move(100);
             zofka.turnLeft(90);
         }
@@ -96,14 +98,15 @@ public class HlavniProgram {
 
     private void nakresliTrojuhelnik(double x, double y) {
         zofka.setLocation(x, y);
-        for (int i=0; i<3; i++) {
+        for (int i = 0; i < 3; i++) {
             zofka.move(100);
-            zofka.turnLeft(120);}
+            zofka.turnLeft(120);
+        }
     }
 
     private void nakresliCtverec(double x, double y) {
         zofka.setLocation(x, y);
-        for (int i=0; i<4; i++) {
+        for (int i = 0; i < 4; i++) {
             zofka.move(100);
             zofka.turnLeft(90);
         }

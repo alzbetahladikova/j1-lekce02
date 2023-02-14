@@ -28,8 +28,8 @@ public class HlavniProgram {
         nakresliDomek(550, 500);
 
 
-        nakreliKolecko(800,100);
-        nakreliKolecko(1000,100);
+        nakresliKolecko(800,100);
+        nakresliKolecko(1000,100);
 
         nakresliPrasatko(800, 300);
         nakresliPrasatko(1000, 300);
@@ -72,7 +72,7 @@ public class HlavniProgram {
         zofka.turnLeft(150);
     }
 
-    private void nakreliKolecko(double x, double y) {
+    private void nakresliKolecko(double x, double y) {
         zofka.setLocation(x, y);
         for (int i=0; i<360; i++) {
             zofka.move(1);

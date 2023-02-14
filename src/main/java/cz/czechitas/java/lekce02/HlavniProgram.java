@@ -49,7 +49,34 @@ public class HlavniProgram {
 
          */
 
+        // několik domků ručně
 
+        zofka.setLocation(200, 200);
+
+        for (int i=0; i<4; i++) {
+            zofka.move(100);
+            zofka.turnLeft(90);
+        }
+        zofka.move(100);
+        zofka.turnLeft(45);
+        zofka.move(70.7);
+        zofka.turnLeft(90);
+        zofka.move(70.7);
+        zofka.turnLeft(225);
+
+
+        zofka.setLocation(400, 200);
+
+        for (int i=0; i<4; i++) {
+            zofka.move(100);
+            zofka.turnLeft(90);
+        }
+        zofka.move(100);
+        zofka.turnLeft(45);
+        zofka.move(70.7);
+        zofka.turnLeft(90);
+        zofka.move(70.7);
+        zofka.turnLeft(45);
 
 
 
